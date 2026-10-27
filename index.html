@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoQuest | Recycling Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">🌍 EcoQuest</div>
+    <p>Small actions. Big impact.</p>
+  </header>
+
+  <main class="game-container">
+
+    <section class="intro">
+      <span class="badge">♻️ ENVIRONMENTAL HERO</span>
+      <h1>Recycling Challenge</h1>
+      <p>
+        Sort the rubbish into the correct bins.<br>
+        Save the planet, one item at a time!
+      </p>
+    </section>
+
+    <!-- Game statistics -->
+    <section class="stats">
+      <div class="stat-card">
+        <span>⏱️ Time Left</span>
+        <strong id="timer">45</strong>
+        <small>seconds</small>
+      </div>
+
+      <div class="stat-card">
+        <span>⭐ Score</span>
+        <strong id="score">0</strong>
+        <small>points</small>
+      </div>
+
+      <div class="stat-card">
+        <span>🔥 Streak</span>
+        <strong id="streak">0x</strong>
+        <small>multiplier</small>
+      </div>
+    </section>
+
+    <!-- Active Item Area -->
+    <section class="item-area">
+      <div id="waste-item" class="waste-item" draggable="true">
+        <span id="item-emoji">🍾</span>
+        <span id="item-name">Glass Bottle</span>
+      </div>
+      <p class="instruction-text">Drag or click a bin to sort!</p>
+    </section>
+
+    <!-- Recycling Bins -->
+    <section class="bins-container">
+      <div class="bin" data-type="paper">
+        <div class="bin-icon">📄</div>
+        <h3>Paper</h3>
+      </div>
+
+      <div class="bin" data-type="plastic">
+        <div class="bin-icon">🥤</div>
+        <h3>Plastic</h3>
+      </div>
+
+      <div class="bin" data-type="glass">
+        <div class="bin-icon">🍾</div>
+        <h3>Glass</h3>
+      </div>
+
+      <div class="bin" data-type="organic">
+        <div class="bin-icon">🍎</div>
+        <h3>Organic</h3>
+      </div>
+    </section>
+
+    <!-- Game Over Overlay -->
+    <div id="game-over-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>🎉 Time's Up!</h2>
+        <p>Your Final Score: <strong id="final-score">0</strong></p>
+        <button id="restart-btn" class="btn">Play Again</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
